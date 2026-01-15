@@ -379,7 +379,7 @@ function LIST_WEB_USERS {
 # Function for installing dependencies
 function INSTALL_APACHE {
 	echo "${CYAN}Installing dependencies${NORMAL}"
-	apt-get install -yqq apache2 libapache2-mod-php php-cli php-curl php-mbstring php-xml
+	apt-get install -yqq apache2 libapache2-mod-php php-cli php-curl php-mbstring
 	CHECKLASTRC
 
 	#https://www.digitalocean.com/community/tutorials/apache-configuration-error-ah00558-could-not-reliably-determine-the-server-s-fully-qualified-domain-name
@@ -398,7 +398,7 @@ function INSTALL_APACHE {
 
 function INSTALL_NGINX {
 	echo "${CYAN}Installing dependencies${NORMAL}"
-	apt-get install -yqq nginx php-fpm php-cli php-curl php-mbstring php-xml
+	apt-get install -yqq nginx php-fpm php-cli php-curl php-mbstring
 	CHECKLASTRC
 
 	#https://www.inmotionhosting.com/support/server/nginx/hide-nginx-server-version/
@@ -407,7 +407,7 @@ function INSTALL_NGINX {
 
 function INSTALL_LIGHTTPD {
 	echo "${CYAN}Installing dependencies${NORMAL}"
-	apt-get install -yqq lighttpd php-fpm php-cgi php-curl php-mbstring php-xml
+	apt-get install -yqq lighttpd php-fpm php-cgi php-curl php-mbstring
 	CHECKLASTRC
 }
 
