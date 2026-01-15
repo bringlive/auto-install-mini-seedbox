@@ -1,6 +1,6 @@
 #!/bin/bash
 # PLEASE DO NOT SET ANY OF THE VARIABLES, THEY WILL BE POPULATED IN THE MENU
-LASTMODIFIED="2015/11/17"
+LASTMODIFIED="2026/01/20"
 SCRIPTVERSION="2.6"
 
 # https://linuxcommand.org/lc3_adv_tput.php
@@ -248,8 +248,8 @@ function INSTALL_COMMON {
 function HEADER {
 	clear -x
 	echo "${WHITE}${BOLD}--------------------------------------------------------------------------------"
-	echo "                       ${CYAN}Rtorrent + Rutorrent Auto Install"
-	echo "                       Markus https://github.com/MarkusLange${NORMAL}"
+	echo "                       ${CYAN}Rtorrent + Rutorrent + Libtorrent Auto Install"
+	echo "                       FunFap https://github.com/bringlive${NORMAL}"
 	echo "${BOLD}--------------------------------------------------------------------------------${NORMAL}"
 	echo
 }
@@ -398,7 +398,7 @@ function INSTALL_APACHE {
 
 function INSTALL_NGINX {
 	echo "${CYAN}Installing dependencies${NORMAL}"
-	apt-get install -yqq nginx php-fpm php-cli php-curl php-mbstring
+	apt-get install -yqq nginx php-fpm php-cli php-curl php-mbstring php-xml
 	CHECKLASTRC
 
 	#https://www.inmotionhosting.com/support/server/nginx/hide-nginx-server-version/
@@ -407,7 +407,7 @@ function INSTALL_NGINX {
 
 function INSTALL_LIGHTTPD {
 	echo "${CYAN}Installing dependencies${NORMAL}"
-	apt-get install -yqq lighttpd php-fpm php-cgi php-curl php-mbstring
+	apt-get install -yqq lighttpd php-fpm php-cgi php-curl php-mbstring php-xml
 	CHECKLASTRC
 }
 
@@ -445,37 +445,37 @@ method.insert = cfg.session,  private|const|string, (cat,(cfg.basedir),".rtorren
 method.insert = cfg.watch,    private|const|string, (cat,(cfg.basedir),"watch/")
 
 ## Listening port for incoming peer traffic
-network.port_range.set = $PORT_RANGE
+#network.port_range.set = $PORT_RANGE
 ## Start opening ports at a random position within the port range
-network.port_random.set = yes
+#network.port_random.set = yes
 
 ## Tracker-less torrent and UDP tracker support
 ## (conservative settings for 'private' trackers, change for 'public')
-dht.mode.set = disable
+dht.mode.set = yes
 ## UDP port to use for DHT
 dht.port.set = 6881
 
-trackers.use_udp.set = no
+trackers.use_udp.set = yes
 
 ## Enable peer exchange (for torrents not marked private)
-protocol.pex.set = no
+protocol.pex.set = yes
 
 ## Peer settings
 throttle.max_uploads.set = 100
 throttle.max_uploads.global.set = 250
 
-throttle.min_peers.normal.set = 20
-throttle.max_peers.normal.set = 60
-throttle.min_peers.seed.set = 30
-throttle.max_peers.seed.set = 80
-trackers.numwant.set = 80
+#throttle.min_peers.normal.set = 20
+#throttle.max_peers.normal.set = 60
+#throttle.min_peers.seed.set = 30
+#throttle.max_peers.seed.set = 80
+#trackers.numwant.set = 80
 
 #throttle.global_down.max_rate.set = 0
 #throttle.global_up.max_rate.set = 0
 
 ## Encryption options, set to none (default) or any combination of the following:
 ## allow_incoming, try_outgoing, require, require_RC4, enable_retry, prefer_plaintext
-protocol.encryption.set = allow_incoming,try_outgoing,enable_retry
+protocol.encryption.set = allow_incoming,try_outgoing,enable_retry,prefer_plaintext
 
 ## The IP address reported to the tracker
 #network.local_address.set = 127.0.0.1
@@ -519,7 +519,7 @@ encoding.add = UTF-8
 system.umask.set = 0027
 system.cwd.set = (directory.default)
 network.http.dns_cache_timeout.set = 25
-pieces.hash.on_completion.set = no
+pieces.hash.on_completion.set = yes
 #view.sort_current = seeding, greater=d.ratio=
 #keys.layout.set = qwerty
 #network.http.capath.set = "/etc/ssl/certs"
@@ -542,8 +542,22 @@ network.max_open_sockets.set = 300
 
 ## Memory resource usage (increase if you have a large number of items loaded,
 ## and/or the available resources to spend)
-pieces.memory.max.set = 1800M
+pieces.memory.max.set = 1000M
 network.xmlrpc.size_limit.set = 4M
+
+## Hash read-ahead controls how many MB to request the kernel to read
+## ahead. If the value is too low the disk may not be fully utilized,
+## while if too high the kernel might not be able to keep the read
+## pages in memory thus end up trashing.
+#hash.read.ahead = 10
+
+## Interval between attempts to check the hash, in milliseconds.
+#hash.interval = 100
+
+## Number of attempts to check the hash while using the mincore status,
+## before forcing. Overworked systems might need lower values to get a
+## decent hash checking rate.
+#hash_max_tries = 10
 
 ## Heavy I/O seedbox configuration
 ## Uncomment lines below if you have 1Gbit+ Internet link
