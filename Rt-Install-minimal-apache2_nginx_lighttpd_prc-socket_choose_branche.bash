@@ -259,12 +259,12 @@ function LICENSE {
 	#clear -x
 	#echo "${NORMAL}${BOLD}--------------------------------------------------------------------------------"
 	echo " ${NORMAL}THE BEER-WARE LICENSE (Revision 42):"
-	echo " ${GREEN}I${NORMAL} wrote this script, a modified version of Berciks script what is a modified"
+	echo " ${GREEN}I${NORMAL} wrote this script, a modified version of Bercik1337's and MarkusLange's script what is a modified"
 	echo " version of Kerwoods script. As long as you retain this notice you"
 	echo " can do whatever you want with this stuff. If we meet some day, and you"
 	echo " think this stuff is worth it, you can buy me a beer in return.${NORMAL}"
 	echo
-	echo " Contact? use Github https://github.com/MarkusLange"
+	echo " Contact? use Github https://github.com/bringlive"
 	echo
 	echo "${BOLD}--------------------------------------------------------------------------------${NORMAL}"
 	echo
