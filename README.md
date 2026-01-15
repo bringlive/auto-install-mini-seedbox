@@ -71,4 +71,4 @@ and "systemctl rtorrent stop" to start and stop rtorrent respectively.
 ### If You Too Lazy
   1. git clone https://github.com/bringlive/auto-install-rTorrent-ruTorrent-libTorrent.git && cd auto-install-rTorrent-ruTorrent-libTorrent && chmod +x Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash && sudo ./Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash
   2. wget https://raw.githubusercontent.com/MarkusLange/rt-auto-install/master/Rt-Install-minimal-apache2_ngnix_lighttpd_prc-socket_choose_branche.bash && chmod +x Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash && sudo ./Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash
-  3. curl -L https://raw.githubusercontent.com/MarkusLange/rt-auto-install/master/Rt-Install-minimal-apache2_ngnix_lighttpd_prc-socket_choose_branche.bash -o rt-install.bash && chmod +X rt-install.bash && sudo ./rt-install.bash
+  3. curl -L https://raw.githubusercontent.com/MarkusLange/rt-auto-install/master/Rt-Install-minimal-apache2_ngnix_lighttpd_prc-socket_choose_branche.bash -o rt-install.bash && chmod +x rt-install.bash && sudo ./rt-install.bash
