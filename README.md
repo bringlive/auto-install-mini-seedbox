@@ -39,11 +39,11 @@ All in One installer script by me, a modified version of [Bercik1337](https://gi
 
 ## Features ##
 
-* This script performs automatic installation of rTorrent (BitTorrent client) and ruTorrent (web based GUI).
+* This script performs automatic installation of rTorrent (BitTorrent client), ruTorrent (web based GUI) and libTorrent (BitTorrent protocol).
 * It detects your OS and uses most recent version of rT available in repository of your Linux distribution.
 * Gives menu-driven guidance when creating username.
 * This script is minimal inversiv to files and operating system
-* Free choose between apache2, ngnix or lighttpd as webserver
+* Free choose between apache2, nginx or lighttpd as webserver
 
 ## Supported operating systems ##
 
