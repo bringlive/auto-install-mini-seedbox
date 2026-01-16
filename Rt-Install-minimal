@@ -181,6 +181,8 @@ case $DISTRO in
 					21.2) echo "${PURPLE}${BOLD}release:${GREEN} 21.2 (Victoria)" ;					OSFINALNAME=mint212 ;;
 					21.3) echo "${PURPLE}${BOLD}release:${GREEN} 21.3 (Virginia)" ;					OSFINALNAME=mint213 ;;
 					22) echo "${PURPLE}${BOLD}release:${GREEN} 22 (Wilma)" ;					OSFINALNAME=mint22 ;;
+					22.2) echo "${PURPLE}${BOLD}release:${GREEN} 22.2 (Zara)" ;					OSFINALNAME=mint222 ;;
+					22.3) echo "${PURPLE}${BOLD}release:${GREEN} 22.3 (Zena)" ;					OSFINALNAME=mint223 ;;
 					*) echo "${YELLOW}It seems you run Mint OS but unsupported release"; exit 4 ;;
 					esac;;
  			*)
@@ -732,7 +734,7 @@ function INSTALL_COMPLETE {
 		echo
 		echo "Visit rutorrent through the above address."
 		echo "${RED}Now also available over HTTPS!${NORMAL}"
-                echo "Please ${YELLOW} ignore${NORMAL} error messages about _cloudflare spectrogram and screenshots plugin. If you ${YELLOW}desperately${NORMAL} want them, just ${BLUE}apt install  python sox ffmpeg${NORMAL}"
+                echo "Please ${YELLOW} ignore${NORMAL} error messages about _cloudflare, spectrogram, screenshots, dump and rss plugins. If you ${YELLOW}desperately${NORMAL} want them, just ${BLUE}read the NOTE${NORMAL}"
 		echo 
 	else
 		if [[ -z "$lcl" ]]; then
