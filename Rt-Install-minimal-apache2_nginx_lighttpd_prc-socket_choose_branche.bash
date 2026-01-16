@@ -32,7 +32,7 @@ WEB_USER_ARRAY=()
 # rTorrent users home dir
 HOMEDIR=""
 # rTorrent Port-Range
-PORT_RANGE="50000-50000"
+PORT_RANGE="64641-64641"
 # Webserver
 WEBSERVER="apache2"
 # SSL encryption
@@ -445,7 +445,7 @@ method.insert = cfg.session,  private|const|string, (cat,(cfg.basedir),".rtorren
 method.insert = cfg.watch,    private|const|string, (cat,(cfg.basedir),"watch/")
 
 ## Listening port for incoming peer traffic
-#network.port_range.set = $PORT_RANGE
+#network.port_range.set = 64641-64641
 ## Start opening ports at a random position within the port range
 #network.port_random.set = yes
 
@@ -453,7 +453,7 @@ method.insert = cfg.watch,    private|const|string, (cat,(cfg.basedir),"watch/")
 ## (conservative settings for 'private' trackers, change for 'public')
 dht.mode.set = auto
 ## UDP port to use for DHT
-dht.port.set = 6881
+dht.port.set = 64642
 
 trackers.use_udp.set = yes
 
