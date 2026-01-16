@@ -72,3 +72,8 @@ and "systemctl rtorrent stop" to start and stop rtorrent respectively.
   1. git clone https://github.com/bringlive/auto-install-rTorrent-ruTorrent-libTorrent.git && cd auto-install-rTorrent-ruTorrent-libTorrent && chmod +x Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash && sudo ./Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash
   2. wget https://raw.githubusercontent.com/MarkusLange/rt-auto-install/master/Rt-Install-minimal-apache2_ngnix_lighttpd_prc-socket_choose_branche.bash && chmod +x Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash && sudo ./Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash
   3. curl -L https://raw.githubusercontent.com/MarkusLange/rt-auto-install/master/Rt-Install-minimal-apache2_ngnix_lighttpd_prc-socket_choose_branche.bash -o rt-install.bash && chmod +x rt-install.bash && sudo ./rt-install.bash
+
+
+## NOTE
+1. Make sure run with sudo and "adduser [your desire username]" before run the script
+2. If you find "dump" plugin not work, you have to install [dumptorrent](https://github.com/bringlive/auto-install-rTorrent-ruTorrent-libTorrent/releases/download/etc/dumptorrent_1.7.0-ubuntu-latest_amd64.deb) then install it with "sudo dpkg -i dumptorrent_1.7.0-ubuntu-latest_amd64.deb"
