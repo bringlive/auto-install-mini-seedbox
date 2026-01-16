@@ -77,3 +77,4 @@ and "systemctl rtorrent stop" to start and stop rtorrent respectively.
 ## NOTE
 1. Make sure run with sudo and "adduser [your desire username]" before run the script
 2. If you find "dump" plugin not work, you have to install [dumptorrent](https://github.com/bringlive/auto-install-rTorrent-ruTorrent-libTorrent/releases/download/etc/dumptorrent_1.7.0-ubuntu-latest_amd64.deb) then install it with "sudo dpkg -i dumptorrent_1.7.0-ubuntu-latest_amd64.deb"
+3. Then run "sudo service rtorrent restart" and "sudo service apache2 restart"
