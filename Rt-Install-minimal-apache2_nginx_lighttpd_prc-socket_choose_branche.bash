@@ -978,7 +978,7 @@ function INSTALL_COMPLETE {
 	echo
 
 	# The IPv6 local address, is not very used for now, anyway if needed, just change 'inet' to 'inet6'
-	lcl=$(ip addr | grep 'inet ' | awk '{print $2}' | cut -d/ -f1 | grep -v "127." | head -n 1)
+	lcl=$(ip addr | grep 'inet6 ' | awk '{print $2}' | cut -d/ -f1 | grep -v "127." | head -n 1)
 	ext=$(wget -O - -q ipv4.icanhazip.com)
 
 	if [[ ! -z "$lcl" ]] && [[ ! -z "$ext" ]]
@@ -1209,11 +1209,11 @@ function MENU() {
 			CHOOSE_WEBSEVER;;
 		c)
 			HEADER
-			wget -q -O - https://raw.githubusercontent.com/MarkusLange/rt-auto-install/master/Changelog | head -n 17
+			wget -q -O - https://raw.githubusercontent.com/bringlive/auto-install-rTorrent-ruTorrent-libTorrent/master/Changelog | head -n 17
 			read -rsp $'Press any key to continue...' -n1 ke;;
 		t)
 			HEADER
-			wget -q -O - https://raw.githubusercontent.com/MarkusLange/rt-auto-install/master/ToDo | head -n 17
+			wget -q -O - https://raw.githubusercontent.com/bringlive/auto-install-rTorrent-ruTorrent-libTorrent/master/ToDo | head -n 17
 			read -rsp $'Press any key to continue...' -n1 ke;;
 		p)
 			HEADER
