@@ -32,7 +32,7 @@ WEB_USER_ARRAY=()
 # rTorrent users home dir
 HOMEDIR=""
 # rTorrent Port-Range
-PORT_RANGE="6790-6999"
+PORT_RANGE="50000-50000"
 # Webserver
 WEBSERVER="apache2"
 # SSL encryption
