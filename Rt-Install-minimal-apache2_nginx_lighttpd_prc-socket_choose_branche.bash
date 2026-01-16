@@ -1213,7 +1213,7 @@ function MENU() {
 			read -rsp $'Press any key to continue...' -n1 ke;;
 		t)
 			HEADER
-			wget -q -O - https://raw.githubusercontent.com/bringlive/auto-install-rTorrent-ruTorrent-libTorrent/master/ToDo | head -n 17
+			wget -q -O - https://raw.githubusercontent.com/bringlive/auto-install-rTorrent-ruTorrent-libTorrent/master/TODO | head -n 17
 			read -rsp $'Press any key to continue...' -n1 ke;;
 		p)
 			HEADER
