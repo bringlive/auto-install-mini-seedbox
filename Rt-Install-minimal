@@ -391,7 +391,7 @@ function HEADER {
 
 # Function for the Plugins download part.
 function DOWNLOAD_PLUGIN {
-		curl -L "https://bercik.platinum.edu.pl/repo/plugins-3.6.tar.gz" -o plugins-3.6.tar.gz
+		curl -L "https://github.com/bringlive/auto-install-rTorrent-ruTorrent-libTorrent/releases/download/etc/plugins-3.6.tar.gz" -o plugins-3.6.tar.gz
 		tar -zxvf plugins-3.6.tar.gz -C /tmp/
 		if [ $? -eq "0" ]; then
 			rm "$file"
