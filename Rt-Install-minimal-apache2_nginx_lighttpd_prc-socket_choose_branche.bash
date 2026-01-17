@@ -533,11 +533,11 @@ method.insert = d.session_file, simple, "cat=(session.path), (d.hash), .torrent"
 
 ## Enable Local Peer Discovery or Local Service Discovery
 ## Optional: You can Bind LPD/LSD to a specific network interface (LAN only)
-network.local_peer_discovery.set = yes
+#network.local_peer_discovery.set = yes
 ## Replace with your LAN subnet if needed
 #network.local_peer_discovery.bind = 192.168.1.0
 ## Optional: Enable LPD multicast port (default is 6771)
-network.local_peer_discovery.port.set = 6771
+#network.local_peer_discovery.port.set = 6771
 
 ## Do not modify the following parameters unless you know what you're doing.
 ##
