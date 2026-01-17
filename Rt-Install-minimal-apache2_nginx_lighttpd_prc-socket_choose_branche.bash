@@ -445,7 +445,7 @@ method.insert = cfg.session,  private|const|string, (cat,(cfg.basedir),".rtorren
 method.insert = cfg.watch,    private|const|string, (cat,(cfg.basedir),"watch/")
 
 ## Listening port for incoming peer traffic
-#network.port_range.set = 64641-64641
+network.port_range.set = 64641-64641
 ## Start opening ports at a random position within the port range
 #network.port_random.set = yes
 
