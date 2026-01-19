@@ -20,6 +20,15 @@ WHITE=$(tput setaf 7)
 #Not_used=$(tput setaf 8)
 #DEFAULT=$(tput setaf 9)
 
+# --- ADD HERE ---
+function CHECKLASTRC {
+	if [ $? -ne 0 ]; then
+		echo "${RED}Error: last command failed. Exiting.${NORMAL}"
+		exit 1
+	fi
+}
+# ----------------
+
 #apt update done
 APT_UDATE_NEEDED=true
 
@@ -41,7 +50,7 @@ SSL_ENCRYPTION="Self Signed"
 DOMAINNAME=""
 
 # grep the Software Versions
-RTVERSION=$(apt-cache policy rtorrent | head -3 | tail -1 | cut -d' ' -f4 | cut -d'-' -f1)
+RTVERSION="source-build"
 LIBTORRENTVERSION="source-build"
 echo "${CYAN}Installing build dependencies for libtorrent${NORMAL}"
 apt install -y \
@@ -54,7 +63,8 @@ apt install -y \
   libssl-dev \
   libcurl4-openssl-dev \
   libcppunit-dev \
-  libxmlrpc-core-c3-dev
+  libxmlrpc-core-c3-dev \
+  libncursesw5-dev
 CHECKLASTRC
 
 function BUILD_LIBTORRENT_FROM_SOURCE {
