@@ -50,8 +50,8 @@ SSL_ENCRYPTION="Self Signed"
 DOMAINNAME=""
 
 # grep the Software Versions
-RTVERSION="source-build"
-LIBTORRENTVERSION="source-build"
+RTVERSION="0.16.6"
+LIBTORRENTVERSION="0.16.6"
 echo "${CYAN}Installing build dependencies for libtorrent${NORMAL}"
 apt install -y \
   build-essential \
