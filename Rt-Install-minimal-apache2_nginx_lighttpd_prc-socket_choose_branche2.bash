@@ -78,7 +78,7 @@ function BUILD_LIBTORRENT_FROM_SOURCE {
 
 	cd libtorrent || exit 1
 
-	autoreconf -fi
+	autoreconf -ivf
 	CHECKLASTRC
 
 	./configure
@@ -112,7 +112,7 @@ function BUILD_RTORRENT_FROM_SOURCE {
 
 	cd rtorrent || exit 1
 
-	autoreconf -fi
+	autoreconf -ivf
 	CHECKLASTRC
 
 	./configure --with-xmlrpc
