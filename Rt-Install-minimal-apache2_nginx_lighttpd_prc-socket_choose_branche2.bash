@@ -63,6 +63,8 @@ apt install -y \
   libssl-dev \
   libcurl4-openssl-dev \
   libcppunit-dev \
+  libxmlrpc-core-c3-dev \
+  libtinyxml2-dev \
   libncursesw5-dev
 CHECKLASTRC
 
