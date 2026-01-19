@@ -63,7 +63,6 @@ apt install -y \
   libssl-dev \
   libcurl4-openssl-dev \
   libcppunit-dev \
-  libxmlrpc-core-c3-dev \
   libncursesw5-dev
 CHECKLASTRC
 
@@ -115,7 +114,7 @@ function BUILD_RTORRENT_FROM_SOURCE {
 	autoreconf -ivf
 	CHECKLASTRC
 
-	./configure --with-xmlrpc
+	./configure 
 	CHECKLASTRC
 
 	make -j"$(nproc)"
@@ -599,6 +598,7 @@ schedule2 = monitor_diskspace, 15, 60, ((close_low_diskspace, 1000M))
 ## SCGI Connectivity (for alternative rtorrent interfaces, XMLRPC)
 ## Use a IP socket with scgi_port
 #network.scgi.open_port = 127.0.0.1:5000
+#network.scgi.open_local = /tmp/rtorrent.sock
 
 ## Run the rTorrent process as a daemon in the background
 ## (and control via XMLRPC sockets)
@@ -630,6 +630,10 @@ method.insert = d.session_file, simple, "cat=(session.path), (d.hash), .torrent"
 #network.local_peer_discovery.bind = 192.168.1.0
 ## Optional: Enable LPD multicast port (default is 6771)
 #network.local_peer_discovery.port.set = 6771
+
+## XMLRPC + SCGI
+network.scgi.open_local = /tmp/rtorrent.sock
+
 
 ## Do not modify the following parameters unless you know what you're doing.
 ##
