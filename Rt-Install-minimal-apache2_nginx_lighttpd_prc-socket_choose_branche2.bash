@@ -134,7 +134,7 @@ function BUILD_RTORRENT_FROM_SOURCE {
 	echo "${GREEN}rtorrent build complete (${RTVERSION})${NORMAL}"
 }
 
-#RUTORRENTVERSION=$(wget -q https://api.github.com/repos/Novik/ruTorrent/tags -O - | grep name | cut -d'"' -f4 | grep -v 'rutorrent\|plugins\|beta' | head -1)
+#RUTORRENTVERSION=$(wget -q https://api.github.com/repos/bringlive/ruTorrent/tags -O - | grep name | cut -d'"' -f4 | grep -v 'rutorrent\|plugins\|beta' | head -1)
 PHPVERSION=$(apt-cache policy php?.? | grep Candidate | grep -v none | cut -d' ' -f4 | cut -d'.' -f-2)
 
 # Pretty function to spit out ok/fail after each important step.
@@ -310,7 +310,7 @@ function PRE_UTILS {
 	while true
 	do
 		p=$(($p + 1))
-		PARTS=$(wget -q https://api.github.com/repos/Novik/ruTorrent/tags?page=$p -O - | grep name | cut -d'"' -f4 | grep -v 'rutorrent\|plugins\|beta')
+		PARTS=$(wget -q https://api.github.com/repos/bringlive/ruTorrent/tags?page=$p -O - | grep name | cut -d'"' -f4 | grep -v 'rutorrent\|plugins\|beta')
 
 		if [ -z $(echo $PARTS | cut -d' ' -f1) ]
 		then
@@ -725,7 +725,7 @@ function INSTALL_RUTORRENT {
 	apt-get install -yqq ffmpeg sox mediainfo unrar-free
 	
 	echo "${YELLOW}Downloading package${NORMAL}"
-	wget -q https://github.com/Novik/ruTorrent/archive/refs/tags/$RUTORRENTVERSION.zip -O rutorrent.zip
+	wget -q https://github.com/bringlive/ruTorrent/archive/refs/tags/$RUTORRENTVERSION.zip -O rutorrent.zip
 	CHECKLASTRC
 
 	echo "${YELLOW}Unpacking${NORMAL}"
