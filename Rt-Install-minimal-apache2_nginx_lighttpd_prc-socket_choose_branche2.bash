@@ -65,7 +65,7 @@ apt install -y \
   libcppunit-dev \
   libxmlrpc-core-c3-dev \
   libtinyxml2-dev \
-  libncursesw5-dev
+  libncurses-dev
 CHECKLASTRC
 
 function BUILD_LIBTORRENT_FROM_SOURCE {
