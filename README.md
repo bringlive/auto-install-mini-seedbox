@@ -45,13 +45,10 @@ All in One installer script by me, a modified version of [Bercik1337](https://gi
 * This script is minimal inversiv to files and operating system
 * Free choose between apache2, nginx or lighttpd as webserver
 
-## Supported operating systems ##
+## Tested on ##
 
-* **Debian**
-* **Raspbian**
 * **Ubuntu**
 * **Mint**
-* **LMDE**
 
 ## What the scripts does ##
 In the installation process you have to choose a system user to run rtorrent. The script add a service that
