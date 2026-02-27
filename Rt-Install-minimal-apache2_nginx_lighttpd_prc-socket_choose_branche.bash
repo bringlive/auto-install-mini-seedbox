@@ -205,7 +205,6 @@ function PRE_UTILS {
 		echo ")"
 
 		apt-get update
-		apt-get -yqq dist-upgrade
 		APT_UDATE_NEEDED=false
 		apt-get install -yqq $base0 $base1
 		#https://peteris.rocks/blog/quiet-and-unattended-installation-with-apt-get/
@@ -239,7 +238,6 @@ function INSTALL_COMMON {
 	if $APT_UDATE_NEEDED
 	then
 		apt-get -qq update
-		apt-get -yqq dist-upgrade
 	fi
 	apt-get install -yqq curl unzip
 }
@@ -483,6 +481,7 @@ protocol.encryption.set = allow_incoming,try_outgoing,enable_retry,prefer_plaint
 
 ## The IP address the listening socket and outgoing connections is bound to
 #network.bind_address.set = 127.0.0.1
+network.bind_address.set = ::
 #network.bind_address.set = rakshasa.no
 
 ## Alternative calls to bind and IP that should handle dynamic IP's
