@@ -481,7 +481,6 @@ protocol.encryption.set = allow_incoming,try_outgoing,enable_retry,prefer_plaint
 
 ## The IP address the listening socket and outgoing connections is bound to
 #network.bind_address.set = 127.0.0.1
-network.bind_address.set = ::
 #network.bind_address.set = rakshasa.no
 
 ## Alternative calls to bind and IP that should handle dynamic IP's
