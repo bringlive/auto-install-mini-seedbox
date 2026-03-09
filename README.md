@@ -1,4 +1,4 @@
-# Auto Install Script Rtorrent + Rutorrent + Libtorrent
+# Auto Install Script LibTorrent + RTorrent + RuTorrent
 
 All in One installer script by me, a modified version of [Bercik1337](https://github.com/Bercik1337/rt-auto-install) and [MarkusLange](https://github.com/MarkusLange/rt-auto-install) script what is a modified version of Kerwood's script.
 
@@ -9,7 +9,7 @@ All in One installer script by me, a modified version of [Bercik1337](https://gi
 
 ## News
 
-**Current version** v2.5 released 2026/01/20
+**Current version** v2.6 released 2026/01/20
 
 	* always use of the latest ruTorrent
 	* no need to care about the distro version
