@@ -1,7 +1,7 @@
 #!/bin/bash
 # PLEASE DO NOT SET ANY OF THE VARIABLES, THEY WILL BE POPULATED IN THE MENU
-LASTMODIFIED="2026/01/20"
-SCRIPTVERSION="2.6"
+LASTMODIFIED="2026/02/20"
+SCRIPTVERSION="2.7"
 
 # https://linuxcommand.org/lc3_adv_tput.php
 # Formatting variables
@@ -425,6 +425,11 @@ apt-get install -yqq \
     pkg-config \
     libcurl4-openssl-dev \
     libncurses-dev \
+    zlib1g-dev \
+    libcppunit-dev \
+    libtinyxml2-dev \
+    libxmlrpc-c++8-dev \
+    xmlrpc-api-utils \
     libssl-dev
 
 cd /tmp
@@ -458,7 +463,7 @@ fi
 
 cd rtorrent
 autoreconf -ivf
-./configure
+./configure --with-xmlrpc-c
 make -j1
 make install
 
