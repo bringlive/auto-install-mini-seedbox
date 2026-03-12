@@ -429,7 +429,6 @@ apt-get install -yqq \
     libcppunit-dev \
     libtinyxml2-dev \
     libxmlrpc-c++8-dev \
-    xmlrpc-api-utils \
     libssl-dev
 
 cd /tmp
