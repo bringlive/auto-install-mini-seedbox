@@ -57,8 +57,8 @@ makes rtorrent start, at a possible reboot, in the given username's tmux session
 and "systemctl rtorrent stop" to start and stop rtorrent respectively.
 
 ### Run the script with sudo or as root:
-  1. git clone https://github.com/bringlive/auto-install-rTorrent-ruTorrent-libTorrent.git
-  2. cd auto-install-rTorrent-ruTorrent-libTorrent
+  1. git clone https://github.com/bringlive/auto-install-mini-seedbox.git
+  2. cd auto-install-mini-seedbox
   3. chmod +x Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash
   4. sudo ./Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash
 
