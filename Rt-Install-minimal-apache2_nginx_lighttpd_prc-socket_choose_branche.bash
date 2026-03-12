@@ -34,7 +34,7 @@ HOMEDIR=""
 # rTorrent Port-Range
 PORT_RANGE="64641-64641"
 # Webserver
-WEBSERVER="apache2"
+WEBSERVER="nginx"
 # SSL encryption
 SSL_ENCRYPTION="Self Signed"
 # Domain-name
