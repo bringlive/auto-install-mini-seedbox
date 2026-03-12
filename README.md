@@ -63,7 +63,7 @@ and "systemctl rtorrent stop" to start and stop rtorrent respectively.
   4. sudo ./Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash
 
 ### Or 01:
-  1. wget https://raw.githubusercontent.com/bringlive/auto-install-rTorrent-ruTorrent-libTorrent/master/Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash && chmod +x Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash && sudo ./Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash
+  1. wget https://raw.githubusercontent.com/bringlive/auto-install-mini-seedbox/master/Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash && chmod +x Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash && sudo ./Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash
   2. curl -L https://raw.githubusercontent.com/bringlive/auto-install-rTorrent-ruTorrent-libTorrent/master/Rt-Install-minimal-apache2_nginx_lighttpd_prc-socket_choose_branche.bash -o rt-install.bash && chmod +x rt-install.bash && sudo ./rt-install.bash
 
 ### Or 02: If you want latest build with Rakshasa
